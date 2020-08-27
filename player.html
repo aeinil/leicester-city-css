@@ -8,25 +8,44 @@
           color: black;
           text-decoration: none;
       }  
-      .saw{
-          color: gray;
-      } 
-      .team{text-decoration: underline;} 
       h1{
           font-size: 50px;
           text-align: center;
+          border-bottom: solid grey;
+          margin: 0;
+          padding: 20px;
+      }
+      #grid ol{
+          border-right: 1px solid grey;
+          width: 100px;
+          margin: 0;
+          padding-top: 10px;
+      }
+      body{
+          margin: 0;
+      }
+      #grid{
+          display: grid;
+          grid-template-columns: 150px 1fr;
+      }
+      #article{
+          padding-left: 10px;
       }
     </style>
     </head>
 <body>
     <h1><a href="first.html">reicester city</a> </h1>
-    <ol>
-        <li><a href="history.html" class="saw" title="역사">history</a></li>
-        <li><a href="coach.html" class="saw" title="감독">coach</a></li>
-        <li><a href="player.html" title="선수">player</a></li>
-    </ol>
-    <h2>player</h2>
-    <p><a href="https://www.lcfc.com/teams/first-team" target="_blank" title="first-team" class="team">first-team</a></p>
-    <img src="vardy.jpg" width="50%">
+    <div id="grid">
+        <ol>
+            <li><a href="history.html" title="역사">History</a></li>
+            <li><a href="coach.html" title="감독">Coach</a></li>
+            <li><a href="player.html" title="선수">Player</a></li>
+        </ol>
+        <div id=article>
+            <h2>player</h2>
+            <p><a href="https://www.lcfc.com/teams/first-team" target="_blank" title="first-team"><u>first-team</u></a></p>
+            <img src="vardy.jpg" width="40%">
+        </div>
+    </div>
 </body>
 </html>
