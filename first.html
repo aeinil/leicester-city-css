@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <title> my first masterpiece</title>
     <meta charset="utf-8">
     <style>
@@ -8,49 +8,64 @@
           color: black;
           text-decoration: none;
       }
+      #grid{
+          display: grid;
+          grid-template-columns: 150px 1fr;
+      }
       body{
           margin: 0;
+      }
+      h3{
+          border-right: solid 5px grey;
+          width: 140px;
+          margin: 0;
       }  
-      ol{
+      #grid ol{
           border-right: 5px solid grey;
           width: 100px;
           margin-top: 0;
           padding-top: 10px;
           padding-bottom: 10px;
-          border-bottom: 5px solid grey;
-      }
-      h3{
-          border-right: 5px solid grey;
-          width: 110px;
-          border-bottom: 5px solid grey;
-          margin: 0;
-          padding: 15px;
       }
       h1{
-        border-bottom: 5px solid grey;
+          border-bottom: 5px solid grey;
           font-size: 50px;
           text-align: center;
-          margin-bottom: 0;
+          margin: 0;
+          padding: 20px;
+
+      }
+      @media (max-width: 800px){
+        #grid{
+          display: block;
+        }
+        #grid ol{
+          border-right: none;
+        }  
+        h1{
+          border-bottom: none;  
+        }
+        h3{
+            border-right: none;
+        }
+        #article{
+            margin: 0;
+        }
       }
     </style>
-</head>
-<body>
-    <h1><a href="first.html">reicester city</a> </h1>
-    <h3><a href="https://www.lcfc.com/" title="lcfc.com">LCFC.com</a> </h3>
-    <ol>
-        <li><a href="history.html" title="역사">history</a></li>
-        <li><a href="coach.html" title="감독">coach</a></li>
-        <li><a href="player.html" title="선수">player</a></li>
-    </ol>
-<!--
-    <h1><a href="first.html">reicester city</a> </h1>
-    <h3><a href="https://www.lcfc.com/" target="_blank" title="lcfc.com"><font color="red">LCFC.com</font></a> </h3>
-    <ol>
-        <li><a href="history.html" target="_blank" title="역사"><font color="red">history</font></a></li>
-        <li><a href="coach.html" target="_blank" title="감독"><font color="red">coach</font></a></li>
-        <li><a href="player.html" target="_blank" title="선수"><font color="red">player</font></a></li>
-    </ol>
---></a>
-    <img src="leicester city.jpg" width="50%">
-</body>
+    </head>
+    <body>
+        <h1><a href="first.html">reicester city</a> </h1>
+        <div id="grid">    
+            <ol>
+                <li><a href="history.html" title="역사">history</a></li>
+                <li><a href="coach.html" title="감독">coach</a></li>
+                <li><a href="player.html" title="선수">player</a></li>
+            </ol>
+            <div id="article">
+                <h2><a href="https://www.lcfc.com/" title="lcfc.com">LCFC.com</a><br>welcome</h2>
+                <img src="leicester city.jpg" width="50%">
+            </div>    
+        </div>    
+    </body>
 </html>
